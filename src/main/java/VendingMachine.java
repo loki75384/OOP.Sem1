@@ -18,6 +18,15 @@ public class VendingMachine {
         }
         return null;
     }
-
+    public ChocoBar getChocoBar(String name){
+        for (Product product : products){
+            if (product instanceof ChocoBar){
+                ChocoBar chocoBar = (ChocoBar)product;
+                if (chocoBar.getName().equals(name))
+                    return chocoBar;
+            }
+        }
+        return null;
+    }
 
 }
